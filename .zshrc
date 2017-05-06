@@ -293,6 +293,7 @@ alias generate_brakeman='be brakeman -o public/coverage/brakeman.html'
 alias fori='be foreman run'
 alias foreman_dev='be foreman start -f Procfile-dev'
 alias foriman='be foreman start'
+alias forimanrc='be foreman start rails console'
 alias foricons='be foreman run rails console'
 alias guardian='be foreman run guard'
 
