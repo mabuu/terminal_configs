@@ -91,7 +91,7 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme
-colorscheme morning
+colorscheme default
 
 " Enable mouse support
 :set mouse=a
