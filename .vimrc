@@ -1,10 +1,19 @@
+source /etc/vimrc
 " Don't try to be vi compatible
 set nocompatible
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-" TODO: Load plugins here (pathogen or vundle)
+" Load plugins here (pathogen or vundle)
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'slim-template/vim-slim.git'
+
+call vundle#end()
+filetype plugin indent on
 
 " Turn on syntax highlighting
 syntax on
@@ -12,8 +21,8 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-" TODO: Pick a leader key
-" let mapleader = ","
+" Pick a leader key
+let mapleader = ","
 
 " Security
 set modelines=0
@@ -32,7 +41,7 @@ set encoding=utf-8
 
 " Whitespace
 set wrap
-set textwidth=79
+"set textwidth=80
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
@@ -95,3 +104,6 @@ colorscheme default
 
 " Enable mouse support
 :set mouse=a
+if &term =~ '^screen'
+  set ttymouse=xterm2
+endif
